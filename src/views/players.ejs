@@ -1,0 +1,72 @@
+<%- include('partials/_header'); -%>
+<div class="container mt-5">
+  <div class="col-md-5">
+    <div class="card text-white bg-dark mb-3">
+      <div class="card-body">
+          <form action="/add" method="post">
+            <h3>Registro de Jugador</h3>
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Nombre" class="form-control" maxlength="50" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="cedula" placeholder="Cedula de Indentidad" class="form-control" maxlength="15" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="peso" placeholder="Peso del Jugador (KG)" class="form-control" maxlength="5" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="estatura" placeholder="Estatura del Jugador (CM)" class="form-control" maxlength="5" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="posicion" placeholder="Posicion a Jugar" class="form-control" maxlength="50" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="telefono" placeholder="Telefono" class="form-control" maxlength="15">
+            </div>
+            <button type="submit" class="btn btn-success">
+             Guardar Jugador
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-100">
+      <h3>Jugadores Registrados</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">N°</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cedula de Indentidad</th>
+            <th scope="col">Peso(KG)</th>
+            <th scope="col">Estatura(CM)</th>
+            <th scope="col">Posicion a Jugar</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data){ %>
+            <% for (var i = 0; i < data.length; i++){ %>
+              <tr class= "table-active">
+                <td><%- (i + 1) -%></td>
+                <td><%- data[i].Nombre -%></td>
+                <td><%- data[i].Cedula -%></td>
+                <td><%- data[i].Peso -%></td>
+                <td><%- data[i].Estatura -%></td>
+                <td><%- data[i].Posicion -%></td>
+                <td><%- data[i].Telefono -%></td>
+                <td>
+                  <a href="/update/<%- data[i].ID -%>" class="btn btn-info">Actualizar</a>
+                  <!-- <a href="/delete/<%- data[i].ID -%>" class="btn btn-warning">Eliminar</a> -->
+                  <a onclick= "confirmar(<%- data[i].ID -%>)" class="btn btn-warning">Eliminar</a>
+                </td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/_footer'); -%>

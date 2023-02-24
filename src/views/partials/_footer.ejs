@@ -1,0 +1,29 @@
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+        <script>
+            function confirmar(id){
+                Swal.fire({
+                    title: 'Desea eliminar el Jugador?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#cb4b16',
+                    cancelButtonColor: '#268bd2',
+                    confirmButtonText: 'Eliminar',
+                    cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = '/delete/' + id;
+                            };
+                        });
+                    };
+        </script>
+        <footer>
+        <div class="row">
+          <div class="card border-dark">
+          <p>Player Manager - 2023</p>
+          <p>Desarrollado por: Jose Castillo - C.I 30.276.873 - P3 Sección 2</p>
+          <a href="https://github.com/Josech03">GitHub</a>
+          </div>
+        </div>
+      </footer>
+    </body>
+</html>
