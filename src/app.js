@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.DB_HOST || 'localhost';
 const USER = process.env.DB_USER || 'root';
-const PASSWORD = process.env.DB_PASSWORD || 'NO';
+const PASSWORD = process.env.DB_PASSWORD || 'YES';
 const DBNAME = process.env.DB_NAME || 'warehose_of_players';
 const DBPORT = process.env.DB_PORT || '3306';
 
