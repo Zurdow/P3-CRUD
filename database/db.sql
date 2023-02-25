@@ -9,13 +9,13 @@ use warehose_of_players;
 -- Creando una tabla
 
 CREATE TABLE players(
-	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL,
-	cedula VARCHAR(15) NOT NULL,
-	peso VARCHAR(5) NOT NULL,
-	estatura VARCHAR(5) NOT NULL,
-	posicion VARCHAR(50) NOT NULL,	
-	telefono VARCHAR(15)
+	ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Nombre VARCHAR(50) NOT NULL,
+	Cedula VARCHAR(15) NOT NULL,
+	Peso VARCHAR(5) NOT NULL,
+	Estatura VARCHAR(5) NOT NULL,
+	Posicion VARCHAR(50) NOT NULL,	
+	Telefono VARCHAR(15)
 );
 
 -- Para mostrar las tablas

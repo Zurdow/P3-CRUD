@@ -7,22 +7,22 @@
           <form action="/update/<%- data.ID -%>" method="post">
             <h3>Actualizacion de Datos</h3>
             <div class="form-group">
-              <input type="text" name="nombre" placeholder="Nombre" class="form-control" value="<%- data.Nombre -%>" required>
+              <input type="text" name="nombre" placeholder="Nombre" class="form-control" value="<%- data.Nombre -%>" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"  required>
             </div>
             <div class="form-group">
-              <input type="text" name="cedula" placeholder="Cedula de Indentidad" class="form-control" value="<%- data.Cedula -%>" required>
+              <input type="text" name="cedula" placeholder="Cedula de Indentidad" class="form-control" value="<%- data.Cedula -%>" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required>
             </div>
             <div class="form-group">
-              <input type="text" name="peso" placeholder="Peso del Jugador (KG)" class="form-control" value="<%- data.Peso -%>" required>
+              <input type="text" name="peso" placeholder="Peso del Jugador (KG)" class="form-control" value="<%- data.Peso -%>" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required>
             </div>
             <div class="form-group">
-              <input type="text" name="estatura" placeholder="Estatura del Jugador (CM)" class="form-control" value="<%- data.Estatura -%>" required>
+              <input type="text" name="estatura" placeholder="Estatura del Jugador (CM)" class="form-control" value="<%- data.Estatura -%>" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required>
             </div>                        
             <div class="form-group">
-              <input type="text" name="posicion" placeholder="Posicion a Jugar" class="form-control" value="<%- data.Posicion -%>" required>
+              <input type="text" name="posicion" placeholder="Posicion a Jugar" class="form-control" value="<%- data.Posicion -%>" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"  required>
             </div>
             <div class="form-group">
-              <input type="text" name="telefono" placeholder="Telefono" class="form-control" value="<%- data.Telefono -%>">
+              <input type="text" name="telefono" placeholder="Telefono" class="form-control" value="<%- data.Telefono -%>" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
             </div>
               <button type="submit" class="btn btn-info">
                 Actualizar
