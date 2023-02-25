@@ -8,7 +8,7 @@ use warehose_of_players;
 
 -- Creando una tabla
 
-CREATE TABLE players{
+CREATE TABLE players(
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL,
 	cedula VARCHAR(15) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE players{
 	estatura VARCHAR(5) NOT NULL,
 	posicion VARCHAR(50) NOT NULL,	
 	telefono VARCHAR(15)
-};
+);
 
 -- Para mostrar las tablas
 
