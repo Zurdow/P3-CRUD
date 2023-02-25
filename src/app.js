@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const myConnection = require('express-myconnection');
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.DB_HOST || 'localhost';
 const USER = process.env.DB_USER || 'root';
-const PASSWORD = process.env.DB_PASSWORD || 'YES';
+const PASSWORD = process.env.DB_PASSWORD || '';
 const DBNAME = process.env.DB_NAME || 'warehose_of_players';
 const DBPORT = process.env.DB_PORT || '3306';
 
