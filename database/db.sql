@@ -4,7 +4,7 @@ CREATE DATABASE warehose_of_players;
 
 --Utilizando la base de datos
 
-use warehose_of_players;
+USE warehose_of_players;
 
 -- Creando una tabla
 
@@ -24,4 +24,4 @@ SHOW TABLES;
 
 -- Para describir la tabla
 
-describe players;
+DESCRIBE players;
